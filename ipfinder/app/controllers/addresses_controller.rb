@@ -55,8 +55,6 @@ class AddressesController < ApplicationController
     render :json => {:status=>"Saved Successfully"}
   end
 
-
-
 # This is a backup code which will do only simple assignment at the botton of File. It will not sort the IPaddresses
 def old_assign
   content = "1.2.0.0/16, #{params[:ip]} , #{params[:device]}\n"
