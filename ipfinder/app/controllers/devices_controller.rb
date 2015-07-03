@@ -4,6 +4,7 @@ class DevicesController < ApplicationController
   def show
     ip = params[:id].to_s
     ipAllocFilePath = ENV["IPALLOC_DATAPATH"]
+    ipAllocFilePath = "data/ipalloc" if ipAllocFilePath.nil?
     device = ""
     File.open(ipAllocFilePath,'r') do |fileb|
       while line = fileb.gets

@@ -11,6 +11,7 @@ class AddressesController < ApplicationController
 
 ## Reading the Environment variable IPALLOC_DATAPATH
     ip_alloc_file = ENV["IPALLOC_DATAPATH"]
+    ipAllocFilePath = "data/ipalloc" if ipAllocFilePath.nil?
     given_ip = params[:ip].split(".")
     ##Read the File
     #temp file to inset data in the middle
